@@ -1,0 +1,198 @@
+/* CSS untuk tabel film */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #81ecec);
+    color: #333
+}
+header {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    padding: 2em;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+header:after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: bubble 10s infinite linear;
+    z-index: 0;
+}
+main {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 1em;
+    animation: fadeIn 1s ease-out;
+}
+section {
+    margin-bottom: 3em;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+section:hover {
+    transform: translateY(-10px);
+}
+section h2 {
+    color: #2193b0;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 10px rgba(255, 65, 108, 0.3);
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 65, 108, 0.5);
+}
+.cta-button:active {
+    transform: scale(0.98);
+}
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+    color: #fff;
+    margin-top: 3em;
+}
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #2d3436;
+}
+
+select, button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover, button:hover {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+td {
+    padding: 5px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    padding: 5px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f2f6;
+}
+
+tr:hover {
+    background: linear-gradient(135deg, #81ecec, #dfe6e9);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #0984e3;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #74b9ff;
+    transform: scale(1.1);
+}
+
+.pagination a.active {
+    background-color: #81ecec;
+    color: #333;
+    font-weight: bold;
+}
+/* Animations */
+@keyframes bubble {
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    50% { transform: translateY(50px) translateX(50px) scale(1.2); }
+    100% { transform: translateY(0) translateX(0) scale(1); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
